@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service 
+metadata:
+  name: lok-svc 
+  labels:
+    app: app-dev
+    tier: Backend 
+spec:
+  type: LoadBalancer 
+  selector:
+    app: app-dev
+  ports: 
+    - name: http
+      port: 5000
+      targetPort: 5000
